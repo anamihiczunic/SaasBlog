@@ -4,4 +4,6 @@ class Post < ApplicationRecord
   def to_s
     title
   end
+
+  scope :free, -> { where(premium: false) }
 end
